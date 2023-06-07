@@ -66,8 +66,46 @@ div.app-box{
     background-color: white;
 }
 
+.chat{
+    height: calc(100% - 22%);
+}
 
+.user{
+    width: 100%;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+}
 
+.avatar{
+    width: 15%;
+    margin: 10px 10px;
+}
+.avatar img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.preview{
+    width: calc(100% - 25%);
+    margin-top: 5px;
+}
+
+.preview p{
+    color: grey;
+    font-size: .9rem;
+}
+
+.preview h1{
+    font-size: .7rem;
+}
+
+.time{
+    width: 10%;
+    margin-top: 5px;
+    color: grey;
+    font-size: .7rem;
+}
 
 
 .right-column{
