@@ -7,6 +7,7 @@
 
 /* reusable class */
 
+
 .green{
     background-color: #009688;
 }
@@ -48,7 +49,9 @@ div.app-box{
 
 .left-column header{
     height: 8%;
-    background-color: violet;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
 }
 
 .left-column main{
@@ -56,6 +59,23 @@ div.app-box{
     background-color: white;
 }
 
+.name h1{
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.icon{
+width: 20%;
+display: flex;
+align-items: center;
+margin-right: 20px;
+}
+
+i{
+    font-size: 1.3rem;
+    margin: 0 10px;
+    color: gray;
+}
 
 .notification-bar{
     height: 12%;
