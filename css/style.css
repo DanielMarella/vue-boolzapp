@@ -91,3 +91,42 @@ div.app-box{
     background-color: red;
 
 }
+
+.right-column main{
+    display: flex;
+
+}
+
+.received,
+.sent{
+    position: relative;
+    display: flex;
+    width: calc(100% / 2);
+    flex-direction: column;
+    margin: 3rem;
+}
+
+.received p{
+    position: absolute;
+    top: 120px;
+    display: flex;
+    align-items: center;
+    border-radius: 13px;
+    height: 3rem;
+    width: 17rem;
+    padding-left: 1rem;
+    background-color: white;
+}
+
+.sent p{
+    background-color: #d5f9ba;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    width: 17rem;
+    padding-left: 1rem;
+    margin-top: 10px;
+
+}
+
