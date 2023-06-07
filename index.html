@@ -26,12 +26,14 @@
                             <div class="notification-bar"></div>
                             <div class="search-bar"></div>
                             <div class="chat">
-                                <div class="user">
+                                <div class="user" v-for="contact in contacts">
                                     <div class="avatar">
-                                        <img src="img/avatar_1.jpg" alt="">
+                                        {{contact.avatar}}
                                     </div>
                                     <div class="preview">
-                                        <h3>Michele</h3>
+                                        <h3>
+                                            {{contact.name}}
+                                        </h3>
                                         <p>Ultimo messaggio inviato</p>
                                     </div>
                                     <div class="time">
@@ -73,11 +75,6 @@
 
 
 
-
-
-
-
-
     </div>
 
 
@@ -85,3 +82,16 @@
     <script src="js/myscript.js"></script>
 </body>
 </html>
+
+
+
+
+<!-- <img src="img/avatar_1.jpg" alt="">
+</div>
+<div class="preview">
+    <h3>Michele</h3>
+    <p>Ultimo messaggio inviato</p>
+</div>
+<div class="time">
+    <p>12:00</p>
+</div> -->
