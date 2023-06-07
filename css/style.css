@@ -42,7 +42,8 @@ div.app-box{
 .left-column {
     width: 30%;
     height: 100%;
-    border: 2px solid black;
+    border-right: 1px solid grey;
+
 }
 
 .left-column header{
@@ -52,7 +53,7 @@ div.app-box{
 
 .left-column main{
     height: calc(100% - 8%);
-    background-color: blue;
+    background-color: white;
 }
 
 
@@ -62,7 +63,7 @@ div.app-box{
 }
 
 .search-bar{
-    height: 10%;
+    height: 5%;
     background-color: white;
 }
 
@@ -72,13 +73,13 @@ div.app-box{
 
 .user{
     width: 100%;
-    border: 1px solid black;
+    border-bottom: 1px solid rgb(230, 228, 228);
     background-color: white;
     display: flex;
 }
 
 .avatar{
-    width: 15%;
+    width: 50px;
     margin: 10px 10px;
 }
 .avatar img{
@@ -97,7 +98,8 @@ div.app-box{
 }
 
 .preview h1{
-    font-size: .7rem;
+    margin-top: .5rem;
+    font-size: 1rem;
 }
 
 .time{
@@ -111,7 +113,6 @@ div.app-box{
 .right-column{
     width: 70%;
     height: 100%;
-    border: 2px solid black;
 }
 
 .right-column header{
