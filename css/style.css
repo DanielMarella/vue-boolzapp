@@ -68,7 +68,7 @@ div.app-box{
 }
 
 .chat{
-    height: calc(100% - 22%);
+    height: calc(100% - 17%);
     overflow-y: scroll;
 }
 
