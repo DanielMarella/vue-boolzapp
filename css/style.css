@@ -205,8 +205,8 @@ i{
     display: flex;
 }
 
-.received,
-.sent{
+.chat-sx,
+.chat-dx{
     position: relative;
     display: flex;
     width: calc(100% / 2);
@@ -214,7 +214,7 @@ i{
     margin: 3rem;
 }
 
-.received p{
+.received{
     position: absolute;
     top: 120px;
     display: flex;
@@ -226,7 +226,7 @@ i{
     background-color: white;
 }
 
-.sent p{
+.sent {
     background-color: #d5f9ba;
     border-radius: 13px;
     display: flex;

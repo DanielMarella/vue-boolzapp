@@ -93,12 +93,16 @@
                             </div>
                         </header>
                         <main>
-                            <div class="chat-in-progress" v-for="message in contacts[0].messages">
-                                <div class="received">
-                                    <p>{{message.message}}</p>
+                            <div class="chat-in-progress" >
+                                <div class="chat-sx">
+                                    <p v-for="message in contacts[0].messages" :class="contacts[0].messages[0].status === 'received' ? 'sent' : 'received'" >
+                                        {{message.message}}
+                                    </p>
                                 </div>
-                                <div class="sent" >
-                                    <p>{{message.message}}</p>
+                                <div class="chat-dx" >
+                                    <p v-for="message in contacts[0].messages" :class="contacts[0].messages[0].status === 'sent'? 'sent' : 'sent'" >
+                                        {{message.message}}
+                                    </p>
                                 </div>
                             </div>
                         </main>
