@@ -169,7 +169,7 @@ const { createApp } = Vue
             ],
             
             
-            console,log(contacts){}
+            
             
             
             

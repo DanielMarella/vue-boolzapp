@@ -93,12 +93,13 @@
                             </div>
                         </header>
                         <main>
-                            <div class="received">
-                                <p>Tutto fatto!</p>
-                            </div>
-                            <div class="sent">
-                                <p>Hai portato a spasso il cane?</p>
-                                <p>ricordati di stendere i panni</p>
+                            <div class="chat-in-progress" v-for="chat in contacts" >
+                                <div class="received" v-for="text in chat.messages">
+                                    <p>{{text.message}}</p>
+                                </div>
+                                <div class="sent"  v-for="text in chat.messages">
+                                    <p>{{text.message}}</p>
+                                </div>
                             </div>
                         </main>
                         <footer>

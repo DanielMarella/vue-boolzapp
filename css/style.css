@@ -201,7 +201,7 @@ i{
 
 }
 
-.right-column main{
+.right-column .chat-in-progress{
     display: flex;
 }
 
