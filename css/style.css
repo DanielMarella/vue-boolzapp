@@ -121,7 +121,7 @@ i{
 .search i {
     padding: 1px 10px;
     padding-top: 5px;
-    border: 1px solid black;
+    border: 1px solid lightgray;
     border-radius: 20px;
 }
 
@@ -195,7 +195,9 @@ i{
 
 .right-column footer{
     height: 10%;
-    background-color: red;
+    display: flex;
+    align-items: center;
+    background-color: #f3eeea;
 
 }
 
@@ -236,3 +238,14 @@ i{
 
 }
 
+
+.input-text input{
+    width: 700px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+
+footer i{
+    font-size: 1.7rem;
+}
