@@ -96,9 +96,6 @@ i{
     margin: 0 10px;
 }
 
-.notification-warn {
-
-}
 .notification-warn a{
     color: grey;
 }
@@ -106,10 +103,30 @@ i{
 .search-bar{
     height: 5%;
     background-color: white;
+    margin-bottom: 20px;
+}
+
+.search{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.search input{
+    width: 350px;
+    height: 30px;
+    border: none;
+}
+
+.search i {
+    padding: 1px 10px;
+    padding-top: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
 .chat{
-    height: calc(100% - 13%);
+    height: calc(100% - 13% - 20px);
     overflow-y: scroll;
 }
 
