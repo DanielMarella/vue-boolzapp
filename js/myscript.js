@@ -168,7 +168,6 @@ const { createApp } = Vue
                 }
             ],
             
-            newAraay : [],
             newMessage : '',
             activeIndex : 0
         }
@@ -180,8 +179,8 @@ const { createApp } = Vue
         },
 
         addNewMessage(newMessage){
-            this.newAraay.push(newMessage);
-            console.log(this.newAraay)
+            this.contacts[0].messages.push(newMessage);
+            console.log(this.contacts[0].messages)
         }
 
     }
