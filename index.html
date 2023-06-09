@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                             <div class="chat">
-                                <div class="user" v-for="contact in contacts">
+                                <div class="user" v-for="(contact, index) in contacts" @click="selectUser(index)" :class="(index === activeIndex) ? 'active' : ''">
                                     <div class="avatar">
                                         <img :src="contact.avatar" alt="">
                                     </div>
@@ -78,10 +78,10 @@
                         <header class="right-head">
                             <div class="user head-user">
                                 <div class="avatar ">
-                                    <img src="img/avatar_1.jpg" alt="user-icon">
+                                    <img :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name + '\'s avatar'">
                                 </div>
                                 <div class="name">
-                                    <h1>Michele</h1>
+                                    <h1>{{contacts[activeIndex].name}}</h1>
                                     <p>Ultimo messaggio inviato alle 12:00</p>
 
                                 </div>
@@ -94,14 +94,8 @@
                         </header>
                         <main>
                             <div class="message clearfix" >
-                                <div class="message message-sent">
-                                    ciao 
-                                </div>
-                                <div class="message message-sent">
-                                    ciao 
-                                </div>
-                                <div class="message message-received">
-                                    ciao 
+                                <div v-for="messageObj in contacts[activeIndex].messages" class="message" :class="(messageObj).status === 'sent' ? 'message-sent' : 'message-received'">
+                                    {{messageObj.message}}
                                 </div>
 
                             </div>

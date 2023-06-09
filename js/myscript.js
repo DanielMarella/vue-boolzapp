@@ -169,15 +169,15 @@ const { createApp } = Vue
             ],
             
             activeIndex : 0
+        }
+    },
 
-            
-            
-            
-            
-            
-            
+    methods: {
+        selectUser(index){
+            this.activeIndex = index;
         }
     }
+
 }).mount('#app')
 
 
