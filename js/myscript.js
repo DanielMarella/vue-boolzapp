@@ -168,27 +168,37 @@ const { createApp } = Vue
                 }
             ],
             
-            newMessage : {
-                message : '',
-                status : 'sent'
-            },
             activeIndex : 0,
+
+            answerMessage : {
+                message : 'ok',
+                status : 'received'
+            },
+            
         }
     },
-
+    
     methods: {
         selectUser(index){
             this.activeIndex = index;
         },
+        
 
 
         addNewMessage(message){
             this.contacts[this.activeIndex].messages.push({message : message, status : 'sent'});
             console.log(this.contacts[this.activeIndex].messages)
-        }
+        },
 
-    }
+        addNewReceiveMessage(message){
+            setTimeout(() => {
+                this.contacts[this.activeIndex].messages.push({message : 'ok', status : 'received'});
+            }, 1000);
+        } 
 
+        
+    },
+    
 
 }).mount('#app')
 
@@ -197,5 +207,4 @@ const { createApp } = Vue
 // Milestone 3
 // ●	Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
 // ●	Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
-
 
