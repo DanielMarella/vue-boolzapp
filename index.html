@@ -93,17 +93,17 @@
                             </div>
                         </header>
                         <main>
-                            <div class="chat-in-progress" >
-                                <div class="chat-sx">
-                                    <p v-for="message in contacts[0].messages" :class="contacts[0].messages[0].status === 'received' ? 'sent' : 'received'" >
-                                        {{message.message}}
-                                    </p>
+                            <div class="message clearfix" >
+                                <div class="message message-sent">
+                                    ciao 
                                 </div>
-                                <div class="chat-dx" >
-                                    <p v-for="message in contacts[0].messages" :class="contacts[0].messages[0].status === 'sent'? 'sent' : 'sent'" >
-                                        {{message.message}}
-                                    </p>
+                                <div class="message message-sent">
+                                    ciao 
                                 </div>
+                                <div class="message message-received">
+                                    ciao 
+                                </div>
+
                             </div>
                         </main>
                         <footer>

@@ -17,6 +17,12 @@
     background-color: #dadbd2;
 }
 
+.clearfix::after{
+    clear: both;
+    display: block;
+    content: '';
+}
+
 /* ****************** */
 
 
@@ -214,28 +220,19 @@ i{
     margin: 3rem;
 }
 
-.received{
-    position: absolute;
-    top: 120px;
-    display: flex;
-    align-items: center;
-    border-radius: 13px;
-    height: 3rem;
-    width: 17rem;
-    padding-left: 1rem;
-    background-color: white;
+.message{
+    margin: 0 2rem .75rem 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    clear: both;
 }
-
-.sent {
+.message-sent {
+    float: right;
     background-color: #d5f9ba;
-    border-radius: 13px;
-    display: flex;
-    align-items: center;
-    height: 3rem;
-    width: 17rem;
-    padding-left: 1rem;
-    margin-top: 10px;
-
+}
+.message-received{
+    float: left;
+    background-color: white;
 }
 
 
