@@ -168,6 +168,8 @@ const { createApp } = Vue
                 }
             ],
             
+            newAraay : [],
+            newMessage : '',
             activeIndex : 0
         }
     },
@@ -175,8 +177,15 @@ const { createApp } = Vue
     methods: {
         selectUser(index){
             this.activeIndex = index;
+        },
+
+        addNewMessage(newMessage){
+            this.newAraay.push(newMessage);
+            console.log(this.newAraay)
         }
+
     }
+
 
 }).mount('#app')
 
