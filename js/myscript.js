@@ -168,8 +168,12 @@ const { createApp } = Vue
                 }
             ],
             
-            newMessage : '',
-            activeIndex : 0
+            newMessage : {
+                message : '',
+                status : 'sent'
+            },
+            activeIndex : 0,
+            activePosition : 0
         }
     },
 
@@ -178,9 +182,9 @@ const { createApp } = Vue
             this.activeIndex = index;
         },
 
-        addNewMessage(newMessage){
-            this.contacts[0].messages.push(newMessage);
-            console.log(this.contacts[0].messages)
+        addNewMessage(message){
+            this.contacts[0].messages.push({message : message, status : 'sent'});
+            console.log(this.contacts)
         }
 
     }
