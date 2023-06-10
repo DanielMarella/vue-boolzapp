@@ -51,13 +51,12 @@
                             <div class="search-bar">
                                 <div class="search">
                                     <i class="fa-solid fa-magnifying-glass">
-                                    <input type="text">
-
+                                        <input type="text" v-model="searchContact" placeholder="Cerca contatti" />
                                     </i>
                                 </div>
                             </div>
                             <div class="chat">
-                                <div class="user" v-for="(contact, index) in contacts" @click="selectUser(index)" :class="(index === activeIndex) ? 'active' : ''">
+                                <div class="user" v-for="(contact, index) in filteredContacts" @click="selectUser(index)" :class="(index === activeIndex) ? 'active' : ''">
                                     <div class="avatar">
                                         <img :src="contact.avatar" alt="">
                                     </div>

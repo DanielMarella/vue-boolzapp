@@ -169,42 +169,46 @@ const { createApp } = Vue
             ],
             
             activeIndex : 0,
-
-            answerMessage : {
-                message : 'ok',
-                status : 'received'
-            },
-            
+            searchContact: "",
         }
-    },
-    
-    methods: {
-        selectUser(index){
-            this.activeIndex = index;
-        },
-        
-
-
-        addNewMessage(message){
-            this.contacts[this.activeIndex].messages.push({message : message, status : 'sent'});
-            console.log(this.contacts[this.activeIndex].messages)
-        },
-
-        addNewReceiveMessage(message){
-            setTimeout(() => {
-                this.contacts[this.activeIndex].messages.push({message : 'ok', status : 'received'});
-            }, 1000);
-        } 
 
         
+        
     },
-    
 
-}).mount('#app')
+        computed: {
+            filteredContacts() {
+            if (!this.searchContact) {
+                return this.contacts;
+            }
+            const searchTerm = this.searchContact.toLowerCase();
+            return this.contacts.filter((contact) =>
+                contact.name.toLowerCase().includes(searchTerm)
+            );
+            },
+        },
+        
+            methods: {
+                selectUser(index) {
+                this.activeIndex = index;
+                },
+                addNewMessage(message) {
+                this.contacts[this.activeIndex].messages.push({
+                    message: message,
+                    status: "sent",
+                });
+                console.log(this.contacts[this.activeIndex].messages);
+                },
+                addNewReceiveMessage(message) {
+                setTimeout(() => {
+                    this.contacts[this.activeIndex].messages.push({
+                    message: "ok",
+                    status: "received",
+                    });
+                }, 1000);
+                },
+            },
+            }).mount("#app");
 
 
-
-// Milestone 3
-// ●	Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
-// ●	Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 

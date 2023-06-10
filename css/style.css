@@ -119,15 +119,19 @@ i{
 }
 
 .search input{
+    margin-left: 10px;
     width: 350px;
     height: 30px;
     border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid lightgray;
 }
 
 .search i {
     padding: 1px 10px;
     padding-top: 5px;
-    border: 1px solid lightgray;
     border-radius: 20px;
 }
 
@@ -145,7 +149,7 @@ i{
     background-color: #f7f7f7;
 }
 
-.user:hover{
+.left-column .user:hover{
     background-color: lightgray;
 }
 
