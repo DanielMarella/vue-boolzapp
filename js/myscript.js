@@ -188,27 +188,30 @@ const { createApp } = Vue
             },
         },
         
-            methods: {
-                selectUser(index) {
-                this.activeIndex = index;
-                },
-                addNewMessage(message) {
-                this.contacts[this.activeIndex].messages.push({
-                    message: message,
-                    status: "sent",
-                });
-                console.log(this.contacts[this.activeIndex].messages);
-                },
-                addNewReceiveMessage(message) {
-                setTimeout(() => {
-                    this.contacts[this.activeIndex].messages.push({
-                    message: "ok",
-                    status: "received",
-                    });
-                }, 1000);
-                },
+        methods: {
+            selectUser(index) {
+            this.activeIndex = index;
             },
-            }).mount("#app");
+
+            addNewMessage(message) {
+            this.contacts[this.activeIndex].messages.push({
+                message: message,
+                status: "sent",
+            });
+            console.log(this.contacts[this.activeIndex].messages);
+            },
+            
+            addNewReceiveMessage() {
+            setTimeout(() => {
+                this.contacts[this.activeIndex].messages.push({
+                message: "ok",
+                status: "received",
+                });
+            }, 1000);
+            },
+        },
+}).mount("#app");
+
 
 
 
